@@ -20,6 +20,15 @@ Both article URLs returned HTTP 200 through the public site. Exact-URL searches 
 | Vast.ai review | 29 minutes 14 seconds | Not found |
 | SaladCloud RTX 5090 review | 22 minutes 42 seconds | Not found |
 
+## Check log — 2026-11-06 13:51:12 AWST
+
+Both article URLs returned HTTP 200. Exact-URL and title/site searches still returned no public Google result.
+
+| Article | Elapsed from final publication commit | Google result |
+|---|---:|---|
+| Vast.ai review | 39 minutes 50 seconds | Not found |
+| SaladCloud RTX 5090 review | 33 minutes 18 seconds | Not found |
+
 ## Check rule
 
 When the user asks for “谷歌速度” / “Google speed”, check these two exact URLs separately using public search results:
