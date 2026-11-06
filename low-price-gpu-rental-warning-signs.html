@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="How to evaluate unusually cheap GPU rental offers, with public risk examples and a practical verification checklist." />
+    <meta name="robots" content="index, follow" />
+    <title>Low-Cost GPU Rental Warning Signs · Compute Notes</title>
+    <link rel="canonical" href="https://ripollearles-ai.github.io/low-price-gpu-rental-warning-signs.html" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .article-wrap { max-width: 820px; padding: 84px 0 110px; }
+      .article-wrap h1 { font-size: clamp(42px, 7vw, 76px); margin-bottom: 24px; }
+      .article-dek { max-width: 660px; color: var(--muted); font-size: 19px; }
+      .article-meta { display: flex; gap: 18px; margin: 28px 0 58px; color: var(--muted); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+      .prose { max-width: 700px; font-size: 17px; }
+      .prose h2 { margin: 52px 0 16px; font-size: 34px; }
+      .prose p { margin: 0 0 22px; }
+      .prose ul { margin: 0 0 24px; padding-left: 22px; }
+      .prose li { margin: 9px 0; }
+      .prose table { width: 100%; border-collapse: collapse; margin: 24px 0 30px; font-size: 14px; }
+      .prose th, .prose td { border-bottom: 1px solid #d6ddd0; padding: 12px 10px; text-align: left; vertical-align: top; }
+      .prose th { color: #5d8d2d; }
+      .callout { margin: 38px 0; padding: 24px 26px; border-left: 4px solid var(--accent); background: #eaf1e6; }
+      .back { display: inline-block; margin-top: 56px; color: #5d8d2d; font-size: 13px; font-weight: 800; text-decoration: none; }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./">COMPUTE<span>/</span>NOTES</a>
+      <nav aria-label="Primary navigation"><a href="./#notes">Notes</a><a href="./#about">About</a></nav>
+    </header>
+    <main class="article-wrap">
+      <p class="eyebrow">GPU rental risk note · public verification</p>
+      <h1>Low-Cost GPU Rental Warning Signs</h1>
+      <p class="article-dek">A low price is not proof of fraud. The risk rises when a new provider combines an unusually low offer with irreversible payment, unclear ownership, and claims that cannot be independently checked.</p>
+      <div class="article-meta"><span>By Nolan</span><span>2026-11-06</span><span>8 min read</span></div>
+      <article class="prose">
+        <h2>The short answer</h2>
+        <p>The main warning sign is not a low GPU price by itself. The risk rises when a low price appears together with irreversible payment, an unclear operating entity, and service promises that cannot be independently verified. The two public examples reviewed here are <code>gpucloudhq.com</code> and <code>cryptgpu.com</code>. As of 2026-11-06, both sites were reachable over HTTPS and both displayed GPU rental offers. Public checks also showed risk signals such as young domains, privacy-protected registration, cryptocurrency payment, or no-KYC positioning.</p>
+        <p>I would not send money until the operator, refund path, SLA, real capacity, and accountable contact details have been verified. This is a risk analysis, not a legal or regulatory finding of fraud.</p>
+
+        <h2>What was publicly observable</h2>
+        <table><thead><tr><th>Check</th><th>gpucloudhq.com</th><th>cryptgpu.com</th></tr></thead><tbody>
+          <tr><td>Page status</td><td>HTTPS reachable, HTTP 200</td><td>HTTPS reachable, HTTP 200</td></tr>
+          <tr><td>Public positioning</td><td>Monthly GPU rental, below on-demand pricing, no KYC</td><td>Monthly GPU rental, below-market positioning, crypto payments, no KYC</td></tr>
+          <tr><td>Risk signals</td><td>Young domain, privacy-protected WHOIS, cryptocurrency services</td><td>Young domain, privacy-protected WHOIS, Namecheap registration, cryptocurrency services</td></tr>
+          <tr><td>External indicators</td><td>ScamAdviser shows a very low trust score and cites a possible malware report</td><td>ScamAdviser shows a very low trust score; Gridinsoft also presents a warning page</td></tr>
+        </tbody></table>
+        <p>Facts and inferences must be kept separate. A working webpage proves that the current access path responds; it does not prove that the advertised GPUs exist, that a paid instance will be delivered, or that a responsible company can be held to a refund promise. A valid TLS certificate encrypts the connection. It does not certify the business.</p>
+
+        <h2>Why an unusually low price can be dangerous</h2>
+        <p>GPU infrastructure costs more than the accelerator. A real operator also pays for servers, colocation, power, bandwidth, storage, replacement hardware, support, abuse handling, and payment processing. If a young site advertises prices far below comparable offers but does not clearly identify its legal entity, data-center locations, service level, refund rules, and capacity evidence, the customer cannot tell whether the price comes from a genuine promotion, constrained capacity, or an unfulfilled marketing claim.</p>
+        <p>Crypto payment and no-KYC access are not automatic proof of malicious behavior. They do reduce the practical options for disputes and refunds. Before paying, verify the payee, order terms, refund route, support ticket process, outage compensation, data responsibilities, and what happens when the requested GPU is unavailable.</p>
+
+        <h2>Five checks before payment</h2>
+        <ol>
+          <li><strong>Verify the operator.</strong> Find a legal entity, registration jurisdiction, accountable contact, physical business information, and a support address that match the domain, invoice, and terms.</li>
+          <li><strong>Verify the capacity.</strong> Ask for the GPU region, model, VRAM, delivery method, network limits, and storage limits. A model list is not inventory proof. Start with a small, reversible acceptance test.</li>
+          <li><strong>Read the terms.</strong> Check whether prepaid credit is refundable, whether storage continues to bill after a GPU is stopped, how outages are handled, when data is deleted, and which law applies to disputes.</li>
+          <li><strong>Verify the technical delivery.</strong> Test access, GPU identity, driver versions, VRAM, disk throughput, and outbound networking. Save the timestamp, region, and instance identifier.</li>
+          <li><strong>Cap the loss.</strong> Do not upload customer data, private keys, production models, or a complete dataset during the first test. Do not prepay an amount that would be difficult to recover.</li>
+        </ol>
+
+        <div class="callout"><strong>Practical rule:</strong> treat a low price as an invitation to verify the complete service, not as evidence that the offer is safe. If the operator cannot answer basic questions about capacity, billing, support, and refunds, stop before payment.</div>
+
+        <h2>Limits and disclosure</h2>
+        <p>This note is based on public pages, registration summaries, and third-party risk assessments. It does not include a paid order, a live GPU rental, a refund test, or a law-enforcement investigation. It therefore cannot state as a matter of fact that either site is a scam. The careful conclusion is that, on the verification date, both are high-risk offers that require a higher evidence threshold before payment. Domains, pages, terms, and operators can change.</p>
+        <p>For independent GPU rental references and cost context, see <a href="https://renderindex.biz/en/" rel="noopener">Render Index</a>, then validate the exact offer with your own small acceptance test and the written terms.</p>
+        <p><strong>Update record:</strong> Author: Nolan · Published: 2026-11-06 · Last checked: 2026-11-06 · Public-information risk analysis, not legal advice or investment advice.</p>
+      </article>
+      <section class="related-links" aria-labelledby="related-heading"><h2 id="related-heading">Related GPU rental notes</h2><ul><li><a href="vast-ai-review.html">Vast.ai review</a> — marketplace flexibility and host-level variation.</li><li><a href="saladcloud-rtx-5090-review.html">SaladCloud RTX 5090 pricing note</a> — a low-cost offer and its workload limits.</li><li><a href="https://renderindex.biz/en/" rel="noopener">Render Index</a> — independent GPU rental data and cost references.</li></ul></section>
+      <div class="article-footer-nav"><a href="./">← GPU rental review archive</a><a href="vast-ai-review.html">Previous: Vast.ai review →</a></div>
+    </main>
+    <footer class="site-footer"><span>© 2026 Nolan</span><span><a href="./">GPU rental reviews</a> · <a href="https://renderindex.biz/en/" rel="noopener">Render Index data</a></span></footer>
+  </body>
+</html>
