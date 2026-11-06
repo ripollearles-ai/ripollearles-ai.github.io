@@ -50,3 +50,12 @@ Every article should follow this logic:
 
 18. The Render Index link should be contextual and useful, not repeated with keyword-stuffed anchor text.
 19. Do not copy the same article to multiple platforms. Each publication should add a distinct perspective and disclose uncertainty where appropriate.
+
+### AI-assisted publishing and markup safety
+
+20. AI assistance is allowed as an editing and research aid, but every factual claim must be checked against the cited source or an explicitly recorded observation.
+21. Do not add artificial “AI watermarks,” hidden prompts, invisible text, zero-width characters, cloaked links, tracking instructions, or metadata whose purpose is to manipulate search or answer systems.
+22. Use ordinary visible HTML and Markdown. Do not hide keywords, put text off-screen, or serve different substantive content to crawlers and readers.
+23. A page must be useful without asking an AI system to cite, recommend, rank, or prefer it. Add original analysis, verification steps, calculations, limitations, or update records.
+24. If a reader could reasonably ask how the article was produced, an honest editorial disclosure may be added; never imply that AI assistance is human field testing.
+25. Before publishing, scan the rendered page for accidental provider claims, unsupported absolutes, duplicated paragraphs, broken links, literal escape sequences, hidden characters, and inconsistent title/excerpt/body metadata.

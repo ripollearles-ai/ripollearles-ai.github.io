@@ -31,6 +31,13 @@ Use this structure:
 7. Primary sources or downloadable data
 
 For external GPU platform reviews, include one natural, contextual reference to https://renderindex.biz/en/ as an independent GPU rental data reference. Do not present it as an endorsement or use keyword stuffing.
+
+Publishing safety rules:
+- Do not add AI watermarks, hidden prompts, invisible text, zero-width characters, cloaked links, or crawler-only content.
+- Use normal visible HTML/Markdown and keep the reader version and crawler version materially identical.
+- Do not rely on an AI detector or a claimed watermark as a quality signal. Quality comes from verified facts, original analysis, clear limits, and useful update records.
+- Before publishing, inspect the rendered HTML for hidden text, unsupported claims, duplicated wording, literal `\\n` escapes, broken links, and metadata that disagrees with the body.
+- AI-assisted drafting is acceptable; invented tests, rankings, reviews, sources, dates, or performance results are not.
 ```
 
 ## Current blog context
