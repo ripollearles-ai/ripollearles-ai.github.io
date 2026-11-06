@@ -11,6 +11,15 @@ Timezone: Australia/Perth (AWST, UTC+8)
 | Vast.ai review | `https://ripollearles-ai.github.io/vast-ai-review.html` | 13:11:22 | earlier build | Not found in public search results | about 12 minutes |
 | SaladCloud RTX 5090 review | `https://ripollearles-ai.github.io/saladcloud-rtx-5090-review.html` | 13:17:54 | 13:22:08 | Not found in public search results | about 6 minutes |
 
+## Check log — 2026-11-06 13:40:36 AWST
+
+Both article URLs returned HTTP 200 through the public site. Exact-URL searches and title/site searches returned no public Google result.
+
+| Article | Elapsed from final publication commit | Google result |
+|---|---:|---|
+| Vast.ai review | 29 minutes 14 seconds | Not found |
+| SaladCloud RTX 5090 review | 22 minutes 42 seconds | Not found |
+
 ## Check rule
 
 When the user asks for “谷歌速度” / “Google speed”, check these two exact URLs separately using public search results:
