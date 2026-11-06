@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Practical notes on GPU infrastructure, AI video workflows, and cloud compute economics." />
+    <title>Compute Notes · Nolan</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./">COMPUTE<span>/</span>NOTES</a>
+      <nav aria-label="Primary navigation">
+        <a href="#notes">Notes</a>
+        <a href="#about">About</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <p class="eyebrow">GPU infrastructure · AI workflows · practical engineering</p>
+        <h1>Making compute choices<br /><em>less mysterious.</em></h1>
+        <p class="intro">Field notes from building AI video workflows, testing cloud GPUs, and comparing the real cost of getting work done.</p>
+        <a class="button" href="#notes">Read the latest notes <span>↓</span></a>
+      </section>
+
+      <section id="notes" class="notes-section">
+        <div class="section-heading">
+          <p class="eyebrow">Selected notes</p>
+          <p class="muted">01—03</p>
+        </div>
+
+        <article class="note featured">
+          <div class="note-meta"><span>01</span><span>AI video</span><span>8 min read</span></div>
+          <h2>Planning a GPU environment for AI short-form video</h2>
+          <p>A practical way to think about VRAM, storage, inference time, and the difference between renting a GPU for a test and running a repeatable production workflow.</p>
+          <a href="vast-ai-review.html">Read note <span>↗</span></a>
+        </article>
+
+        <article class="note">
+          <div class="note-meta"><span>02</span><span>Cloud compute</span><span>6 min read</span></div>
+          <h2>When does renting a GPU make more sense than buying one?</h2>
+          <p>The decision is not only about the hourly rate. Utilisation, maintenance, setup time, and the cost of waiting often change the answer.</p>
+          <a href="https://renderindex.biz/en/" rel="noopener">Compare current GPU rental data <span>↗</span></a>
+        </article>
+
+        <article class="note">
+          <div class="note-meta"><span>03</span><span>Engineering</span><span>5 min read</span></div>
+          <h2>Three checks before moving an AI workload to the cloud</h2>
+          <p>Image persistence, container reproducibility, and a simple cost baseline prevent most unpleasant surprises in the first deployment.</p>
+          <a href="vast-ai-review.html#deployment-checklist">Read note <span>↗</span></a>
+        </article>
+      </section>
+
+      <section id="about" class="about">
+        <div>
+          <p class="eyebrow">About the author</p>
+          <h2>Nolan</h2>
+        </div>
+        <p>I write about the practical side of GPU computing: choosing hardware, building AI workflows, and understanding what cloud compute really costs. For independent GPU rental measurements and platform comparisons, see <a href="https://renderindex.biz/en/" rel="noopener">Render Index</a>.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2026 Nolan</span>
+      <span>Built for useful notes, not noise.</span>
+    </footer>
+  </body>
+</html>

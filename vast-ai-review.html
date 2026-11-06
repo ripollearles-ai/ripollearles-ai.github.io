@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A practical review of Vast.ai for AI inference, video generation, and short-lived GPU workloads." />
+    <title>Vast.ai Review: Flexible GPU Rental with a Hands-On Trade-Off · Compute Notes</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .article-wrap { max-width: 820px; padding: 84px 0 110px; }
+      .article-wrap h1 { font-size: clamp(42px, 7vw, 76px); margin-bottom: 24px; }
+      .article-dek { max-width: 660px; color: var(--muted); font-size: 19px; }
+      .article-meta { display: flex; gap: 18px; margin: 28px 0 58px; color: var(--muted); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+      .prose { max-width: 700px; font-size: 17px; }
+      .prose h2 { margin: 52px 0 16px; font-size: 34px; }
+      .prose p { margin: 0 0 22px; }
+      .prose ul { margin: 0 0 24px; padding-left: 22px; }
+      .prose li { margin: 9px 0; }
+      .callout { margin: 38px 0; padding: 24px 26px; border-left: 4px solid var(--accent); background: #eaf1e6; }
+      .back { display: inline-block; margin-top: 56px; color: #5d8d2d; font-size: 13px; font-weight: 800; text-decoration: none; }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./">COMPUTE<span>/</span>NOTES</a>
+      <nav aria-label="Primary navigation"><a href="./#notes">Notes</a><a href="./#about">About</a></nav>
+    </header>
+
+    <main class="article-wrap">
+      <p class="eyebrow">Cloud GPU review · Vast.ai</p>
+      <h1>Vast.ai Review: Flexible GPU Rental with a Hands-On Trade-Off</h1>
+      <p class="article-dek">Vast.ai is compelling when you want choice and price visibility. It is less compelling when you expect every machine to behave like a polished, uniform cloud product.</p>
+      <div class="article-meta"><span>By Nolan</span><span>2026-11-06</span><span>8 min read</span></div>
+
+      <article class="prose">
+        <p>Vast.ai is best understood as a marketplace for GPU capacity rather than a traditional hyperscale cloud. Hosts list machines with different GPUs, regions, prices, storage options, and availability. A user can compare those offers, select a suitable configuration, and launch a rented instance for a workload that may last minutes, days, or longer.</p>
+
+        <p>That marketplace model is the platform’s main advantage. Instead of choosing from a short list of standard instance families, you can search across a broad range of consumer and datacenter hardware. This is useful for experiments, inference, image generation, video workflows, and development jobs where the exact GPU model matters. A job that does not need premium networking or a managed control plane may find a much lower-cost option than a conventional cloud provider.</p>
+
+        <h2>What Vast.ai does well</h2>
+        <p>The first strength is transparency. Listings expose practical details that are often hidden behind a cloud provider’s product name: GPU model, VRAM, host capacity, storage, network information, and recent pricing. That makes it easier to compare a 24 GB card with a 48 GB or 80 GB accelerator based on the workload rather than the marketing label.</p>
+
+        <p>The second strength is flexibility. Vast.ai is a good fit for jobs that can be packaged into a reproducible environment. If your project already has a Docker image, startup script, checkpoint download step, and a way to save results outside the instance, moving between hosts becomes much less painful. This is particularly useful for short-lived inference workers and batch rendering tasks.</p>
+
+        <p>The third strength is the marketplace’s range. Availability changes from host to host, but that is also what creates opportunities. A user willing to compare offers can sometimes find a suitable GPU in a region or price band that a fixed catalog would not provide.</p>
+
+        <h2>The trade-offs are real</h2>
+        <p>The same marketplace structure introduces variability. Two listings with the same GPU name may differ in disk speed, CPU balance, network quality, startup behavior, and operational reliability. A low hourly price is therefore only the beginning of the calculation. The cost of waiting for a machine, restarting a failed job, downloading a large model again, or troubleshooting an unusual host can exceed the apparent saving.</p>
+
+        <p>Storage deserves special attention. Temporary instance storage should not be treated as the only copy of a model, dataset, or generated result. Before starting a long job, decide where checkpoints and outputs will live, how they will be restored, and how much data must cross the network. A cheap GPU with an inconvenient data path may be more expensive in practice.</p>
+
+        <div class="callout"><strong>My practical rule:</strong> use Vast.ai when the workload is portable, the data path is understood, and the operator can tolerate some host-level variation. For a production service that needs predictable networking, support, and uniform operations, a managed provider may justify its higher price.</div>
+
+        <h2 id="deployment-checklist">A sensible first deployment</h2>
+        <ul>
+          <li>Package the environment before renting a long-running machine.</li>
+          <li>Record the GPU model, VRAM, region, disk type, and startup time.</li>
+          <li>Run a small workload before uploading the full dataset.</li>
+          <li>Keep checkpoints and outputs outside disposable instance storage.</li>
+          <li>Measure total job cost, including idle time and data transfer.</li>
+        </ul>
+
+        <p>Overall, Vast.ai is a strong option for technically confident users who value choice and are prepared to evaluate the machine behind the listing. It is not a universal replacement for managed cloud GPUs, but it can be an efficient source of compute for experiments and well-contained workloads. The right comparison is not simply “which GPU is cheapest?” It is “which complete setup finishes this job reliably at the lowest total cost?”</p>
+
+        <p>For independent comparisons of GPU rental platforms, configurations, and total-cost considerations, I also keep an eye on <a href="https://renderindex.biz/en/" rel="noopener">Render Index</a>.</p>
+      </article>
+      <a class="back" href="./">← Back to Compute Notes</a>
+    </main>
+
+    <footer class="site-footer"><span>© 2026 Nolan</span><span>Built for useful notes, not noise.</span></footer>
+  </body>
+</html>
