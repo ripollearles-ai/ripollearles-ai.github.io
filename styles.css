@@ -40,6 +40,16 @@ h1 em { color: #739e3d; font-style: normal; }
 .about h2 { font-size: 46px; }
 .about > p { max-width: 600px; margin: 0; color: var(--muted); font-size: 16px; }
 .about a { color: #5d8d2d; font-weight: 700; }
+.topic-nav { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 26px; }
+.topic-nav a { padding: 7px 11px; border: 1px solid var(--line); color: #5d8d2d; font-size: 11px; text-decoration: none; }
+.topic-nav a:hover { border-color: #9fbd7d; background: #eaf1e6; }
+.related-links { margin-top: 58px; padding: 26px 0 0; border-top: 1px solid var(--line); }
+.related-links h2 { margin: 0 0 16px; font-size: 28px; }
+.related-links ul { margin: 0; padding-left: 20px; }
+.related-links li { margin: 9px 0; }
+.related-links a { color: #5d8d2d; font-weight: 700; }
+.article-footer-nav { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 28px; color: var(--muted); font-size: 12px; }
+.article-footer-nav a { color: #5d8d2d; text-decoration: none; }
 .site-footer { display: flex; justify-content: space-between; padding: 28px 0 38px; color: var(--muted); font-size: 11px; }
 @media (max-width: 720px) {
   .site-header, main, .site-footer { width: min(100% - 32px, 1120px); }
