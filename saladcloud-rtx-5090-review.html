@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A practical review of SaladCloud's RTX 5090 Lowest Priority offer at $0.25 per GPU-hour." />
+    <title>SaladCloud RTX 5090 at $0.25/hr: Bargain or Batch-Only Deal? · Compute Notes</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .article-wrap { max-width: 820px; padding: 84px 0 110px; }
+      .article-wrap h1 { font-size: clamp(42px, 7vw, 76px); margin-bottom: 24px; }
+      .article-dek { max-width: 660px; color: var(--muted); font-size: 19px; }
+      .article-meta { display: flex; gap: 18px; margin: 28px 0 58px; color: var(--muted); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+      .prose { max-width: 700px; font-size: 17px; }
+      .prose h2 { margin: 52px 0 16px; font-size: 34px; }
+      .prose p { margin: 0 0 22px; }
+      .prose ul { margin: 0 0 24px; padding-left: 22px; }
+      .prose li { margin: 9px 0; }
+      .callout { margin: 38px 0; padding: 24px 26px; border-left: 4px solid var(--accent); background: #eaf1e6; }
+      .back { display: inline-block; margin-top: 56px; color: #5d8d2d; font-size: 13px; font-weight: 800; text-decoration: none; }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./">COMPUTE<span>/</span>NOTES</a>
+      <nav aria-label="Primary navigation"><a href="./#notes">Notes</a><a href="./#about">About</a></nav>
+    </header>
+
+    <main class="article-wrap">
+      <p class="eyebrow">GPU pricing review · SaladCloud</p>
+      <h1>SaladCloud's RTX 5090 at $0.25/hr: Bargain or Batch-Only Deal?</h1>
+      <p class="article-dek">A very low RTX 5090 rate is attractive, but the price only makes sense when the workload can survive interruption.</p>
+      <div class="article-meta"><span>By Nolan</span><span>2026-11-06</span><span>6 min read</span></div>
+
+      <article class="prose">
+        <p>SaladCloud currently lists an RTX 5090 with 32 GB of VRAM at $0.25 per GPU-hour on its Lowest priority tier. That is a striking price for a Blackwell consumer GPU, especially when the same card is listed at $0.367 on Low, $0.483 on Medium, and $0.600 on High priority. At the lowest rate, a continuously running month of 730 hours would be about $182.50 before any account-specific taxes or other charges.</p>
+
+        <p>The headline number needs context. This is not a conventional dedicated cloud instance with a guaranteed host. SaladCloud's Community Cloud is built from distributed consumer GPUs, and the Lowest tier is designed for work that can be interrupted and retried. The platform states that higher priority tiers are protected from preemption by other workloads, while Lowest is the most interruptible option. The price is therefore a trade: you exchange scheduling certainty for a very low running cost.</p>
+
+        <h2>What you get</h2>
+        <p>The RTX 5090 configuration offers 32 GB of VRAM, which is useful for image generation, video workflows, model inference, and many development tasks that do not fit comfortably on a 16 GB card. SaladCloud also includes vCPU and RAM with the GPU class, and bills GPU containers by the seconds they spend running. The pricing page says allocation, image download, and cold start are not billed, which makes short experiments easier to budget.</p>
+
+        <p>Another positive is that SaladCloud treats the lower-cost tier as a workload policy rather than a mystery discount. Lowest is explicitly positioned for retryable batch work and stateless inference behind a queue. That gives an experienced user a clear way to decide whether the offer fits.</p>
+
+        <h2>Where the bargain breaks down</h2>
+        <p>A preemptible GPU is a poor choice for an interactive session, a long training run without checkpoints, or a service that must stay online continuously. A job can be interrupted when higher-priority demand arrives, and the time spent restarting, downloading models, or rebuilding state is part of the real cost. The $0.25 rate is only a bargain if the application is designed around that behavior.</p>
+
+        <div class="callout"><strong>Best fit:</strong> image batches, video-frame processing, queue-based inference, test jobs, and other workloads that save progress frequently and can retry without manual intervention.</div>
+
+        <h2>How I would use it</h2>
+        <ul>
+          <li>Put the workload in a reproducible container.</li>
+          <li>Keep checkpoints, inputs, and outputs outside the disposable instance.</li>
+          <li>Use a queue with retry and idempotent job IDs.</li>
+          <li>Measure completion cost, not just the advertised GPU-hour.</li>
+          <li>Move to Medium or High when interruption costs more than the price difference.</li>
+        </ul>
+
+        <p>My verdict is positive but specific: SaladCloud's RTX 5090 at $0.25 per hour is one of the more interesting GPU rental specials available right now, but it is a batch-compute deal, not a cheap replacement for a reliable dedicated workstation. For stateless AI inference and media processing, the economics can be excellent. For interactive development or fragile training jobs, paying for a higher priority tier—or choosing a more uniform provider—will usually be the better decision.</p>
+
+        <p>Before committing to any rental, I would compare the current offer, workload requirements, and total running cost against independent GPU rental data at <a href="https://renderindex.biz/en/" rel="noopener">Render Index</a>. SaladCloud's official <a href="https://salad.com/pricing/" rel="noopener">pricing page</a> should be checked again before deployment because availability and rates can change.</p>
+      </article>
+      <a class="back" href="./">← Back to Compute Notes</a>
+    </main>
+
+    <footer class="site-footer"><span>© 2026 Nolan</span><span>Built for useful notes, not noise.</span></footer>
+  </body>
+</html>
